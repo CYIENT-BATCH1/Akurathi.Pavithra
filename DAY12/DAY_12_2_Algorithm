@@ -1,0 +1,5 @@
+SECOND QUESTION ALGORITHM 
+
+1.Initialize the strings with empty string. size stored in one variable.
+2.use for loop  find the empty string.
+3.when you found empty string that will be replaced with the given string. print all the string with replaced string.
