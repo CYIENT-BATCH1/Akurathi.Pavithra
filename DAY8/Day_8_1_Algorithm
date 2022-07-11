@@ -1,0 +1,8 @@
+ALGORITHM:-
+
+1.Pass two arg and 1 is return value, Ask input from the user (byte value and bit position).
+2.Argument 1 can be byte value and argument 2 can be bit position in the byte value 
+3. bit position can be left shifted with 1 and which can be stored in temperory variable as mask(fun has to flip to the bit position).
+4.Then byte value xor with temperory variable mask that can store in binary value.
+5.stored byte value can be store in another variable as result.
+6.result value is the output.
