@@ -1,0 +1,10 @@
+3.Set the register T0CON value such a way that bit TMR0ON and PSA bit are set 
+   (1), without disturbing the other bits.
+
+
+1.Set the bits TM0ON and PSA which are in 7th position(TM0ON) and 3rd position(PSA).
+2.Take some hex value which is stored in a variable called n.
+3.Store the positions in variables.
+4.Then one is left shifted with 3(position) this can be ORed with one is again left shifted with 7(position).
+5.That final result can be again ORed with n which is having hex value.Then print n value as output.
+
