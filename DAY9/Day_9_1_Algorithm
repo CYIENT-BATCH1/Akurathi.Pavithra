@@ -1,0 +1,8 @@
+1.
+I). Set the register SSPSTAT value such a way that bit CKE, P and S bit are cleared (0), without disturbing the other bits.
+II). Find out the value of UA, BF, SMP bits in SSPSTAT register if the value of the register is 0x55
+------------------------------------------------------------------------------------------------------------------------
+ALGORITHM:-
+1.to clear 3,4 and 6 bits.Take two variables as n and n1 with declaration hex values.
+2.Then do once complement to ((1<<3)|(1<<4)|(1<<6)) and result will ANDed with n hex value this can be store in the n.
+3.Then print directly (n1>>7)&1, (n1>>1)&1 and (n1>>0)&1) these 3 expressions in hex values as result.
