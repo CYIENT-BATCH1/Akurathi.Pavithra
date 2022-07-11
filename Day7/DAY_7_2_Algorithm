@@ -1,0 +1,10 @@
+) all even bits of x by bitwise and(&) of x with 0xAAAAAAAAAAAAAAAA. number 0xAAAAAAAAAAAAAAAA is a 64-bit number  all even bits set as 1 and all odd bits as 0. 
+
+2) all odd bits of x by doing bitwise and of x with 0x5555555555555555.  number 0x5555555555555555 is a 64-bit number  all odd bits set as 1 and all even bits as 0. 
+
+3) Right shift all even bits and store  variable even.
+
+4) Left shift all odd bits and store variable odd.
+
+5) Combine new even and odd bits and return by bitwise oring both variables.
+
