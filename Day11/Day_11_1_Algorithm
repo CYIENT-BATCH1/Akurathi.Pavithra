@@ -1,0 +1,9 @@
+ALGOITHM DAY11
+
+1.accept the sorted data and search value
+2.middle value is equal to addition of low index and high index and divide by 2.
+3.after getting the mid value check whether the input(search value) is equal to the mid value.
+  (if true return mid index otherwise jump to next cond).
+4.if mid value of index is less than input prints the mid value + 1 otherwise mid value - 1.
+5.if cond is false Repeatedly check from the second point until the value is found.
+ surprised 1
