@@ -1,0 +1,4 @@
+1)two registers  and read
+2)the frist register is equal to 0x07 ,if go to inside the statement 
+3)second register of  the first 4bit will be zero using add operation with F0
+4)print second register
