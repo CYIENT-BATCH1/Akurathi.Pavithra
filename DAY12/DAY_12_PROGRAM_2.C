@@ -25,13 +25,18 @@ Switch status valueMeaning
 int main()
 {
     char *a[]={"cherry","fruit", " ","orange","mango"};
+    //declare array
     int size=sizeof a/sizeof(a[0]);
+    //find out size
     int pos=0;
+    //print the size
     printf("%d",size);
     int i;
+    //checking  for the empty string
     for(i=0;i<4;i++){
         printf("\n");
         if(a[i]==" "){
+            //where the empty string 
          a[i]="cyient";
          pos=i;
     printf("%s",*(a+i));
