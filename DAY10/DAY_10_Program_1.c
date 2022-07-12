@@ -10,74 +10,36 @@ unsigned char G_Msg_EngineInformation_Byte[5u];
 
 
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-   int rq0,rq1,rq2,rq3,rq4;
- int  Temperature_uchar =50u ;
-int EngineRpm_uint =1000u;
-int EngineInformation_Byte[5];
-rq0= Temperature_uchar&(0x00);
-for(int i=7;i>=0;i--){
-     int n=(rq0>>i)&1;
-     printf("%x ",n);
- }
- printf("\n");
-rq1=Temperature_uchar&(0x00);
-for(int i=7;i>=0;i--){
-     int n=(rq1>>i)&1;
-     printf("%x ",n);
- }
- printf("\n");
- rq2=Temperature_uchar&(0x00);
- for(int i=7;i>=0;i--){
-     int n=(rq2>>i)&1;
-     printf("%x ",n);
- }
-  printf("\n");
- rq4=Temperature_uchar&(0x00);
- for(int i=7;i>=0;i--){
-     int n=(rq4>>i)&1;
-     printf("%x ",n);
- }
-  printf("\n");
-  rq3=Temperature_uchar|(0x00);
-  printf("rq3 value:");
- for(int i=7;i>=0;i--){
-     int n=(rq3>>i)&1;
-     printf("%x ",n);
- }
- printf("\n");
-     rq0=EngineRpm_uint|(0x00);
-       printf("EngineRpm_uint rq0 value:");
-     for(int i=4;i>=0;i--){
-         printf("%x ",(rq0>>i)&1);
-     }
-     printf("\n");
-     rq1=EngineRpm_uint|(0x00);
-      printf("EngineRpm_uint rq1 value:");
-     for(int i=7;i>=0;i--){
-         printf("%x ",(rq1>>i)&1);
-}
-printf("\n");
- rq2=EngineRpm_uint|(0x00);
-  printf("EngineRpm_uint rq2 value:");
-         printf("%x ",(rq2>>7)&1);
-         printf("\n");
- rq3=EngineRpm_uint&(0x00);
-  printf("EngineRpm_uint rq3 value:");
- for(int i=7;i>=0;i--){
-         printf("%x ",(rq3>>i)&1);
- }
- printf("\n");
- rq4=EngineRpm_uint&(0x00);
-  printf("EngineRpm_uint rq4 value:");
- for(int i=7;i>=0;i--){
-         printf("%x ",(rq4>>i)&1);
-}
-}
+#include<stdio.h>
+int main(){
+    unsigned char G_Eng_EngineTemperature_uchar = 50u ;
+    for(int i=7;i>=0;i--){
+      //printing temperature in decimal to binary 
+        printf("%x ",(G_Eng_EngineTemperature_uchar>>i)&1);  
+    }
+    unsigned int G_Eng_EngineRpm_uint = 1000u;
+    printf("\n");
+    for(int j=12;j>=0;j--){
+      //printing rpm in decimal to binary
+        printf("%x ",(G_Eng_EngineRpm_uint>>j)&1);             
+    }
+  //assiging array of size 5
+        unsigned char G_Msg_EngineInformation_Byte[5u]={0x00,0x00,0x00,0x00,0x00};
+  //temperature in 3rd element in an array
+        G_Msg_EngineInformation_Byte[3]=(G_Eng_EngineTemperature_uchar);
+   //printing from 9th to 12th bits in an array of 0th element
+        G_Msg_EngineInformation_Byte[0]=((G_Eng_EngineRpm_uint>>9)&1);  
+  //assiging 1 to 8 bits to  array of 2nd element
+        G_Msg_EngineInformation_Byte[2]=(G_Eng_EngineRpm_uint<<8);  
+   //assiging 0th bit to an array of 1st element 
+        G_Msg_EngineInformation_Byte[1]=((G_Eng_EngineRpm_uint>>1)&0xff);          
+        for(int i=0;i<5;i++){
+       printf("\nG_Msg_EngineInformation_Byte[%d]:\n",i);
+        for(int j=7;j>=0;j--)
+          //printing array of elements
+            printf("%d ",(G_Msg_EngineInformation_Byte[i]>>j)&1);                 
+       }
+    }
 
 
 
