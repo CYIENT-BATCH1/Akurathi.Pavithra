@@ -1,0 +1,9 @@
+ALGORITHM:
+
+1.Read the temperature and RPM values which they given
+2.convert them into binary form.
+3.store temperature and RPM values in an array of size 5.
+4.In this the temperature value will be stored in an array of 3rd element.
+5.In RPM value the 0th bit will be stored in an array of of 2nd element.
+6.RPM values of 1 to 8 bits will be stored in an array of of 1st element.
+7.From 9 to 12 bits it stores in array of 0th element.
